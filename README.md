@@ -4,7 +4,7 @@ An AI assistant for the **FIA 2026 Formula 1 Technical Regulations**, built with
  
 - **[PydanticAI](https://ai.pydantic.dev/)** — type-safe LLM agents with structured outputs
 - **[LangChain](https://python.langchain.com/)** — RAG pipeline (PDF loading + FAISS vector store)
-- **[Gemini 2.0 Flash](https://deepmind.google/technologies/gemini/)** — Google's LLM
+- **[Gemini 2.5 Flash](https://deepmind.google/technologies/gemini/)** — Google's LLM
 - **[Rich](https://rich.readthedocs.io/)** — beautiful terminal interface
 
 ## How it works
@@ -13,13 +13,13 @@ An AI assistant for the **FIA 2026 Formula 1 Technical Regulations**, built with
 User question
      │
      ▼
-PydanticAI Agent (Gemini 2.0 Flash)
+PydanticAI Agent (Gemini 2.5 Flash)
      │
      ├── @agent.tool: search_regulations(query)
      │        │
      │        ▼
      │   LangChain RAG
-     │   (FAISS + text-embedding-004)
+     │   (FAISS + gemini-embedding-2-preview)
      │        │
      │        ▼
      │   Relevant PDF chunks
