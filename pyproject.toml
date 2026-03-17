@@ -1,0 +1,29 @@
+[project]
+name = "f1-regulations-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-google-genai>=2.0.0",
+    "faiss-cpu>=1.9.0",
+    "pymupdf>=1.25.0",
+    "rich>=13.0.0",
+    "langchain-text-splitters>=1.1.1",
+    "pydantic-ai>=1.68.0",
+    "python-decouple>=3.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.8.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
